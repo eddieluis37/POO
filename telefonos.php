@@ -34,6 +34,12 @@ class Telefono
 }
 class Celular extends Telefono
 {
+	protected $alambrico = false;
+
+	public function __construct($marca, $modelo)
+	{
+		parent:: __construct($marca, $modelo);
+	}
 
 }
 
@@ -47,3 +53,8 @@ echo '<h2>Telefono</h2>';
 $tel_casa = new Telefono('Panasonic', '	KX-TS550');
 $tel_casa->llamar();
 $tel_casa->mas_info();
+
+echo '<h1>Celular:</h1>';
+$tel_cel = new Celular('Nokia', '5120');
+$tel_cel->llamar();
+$tel_cel->mas_info();
