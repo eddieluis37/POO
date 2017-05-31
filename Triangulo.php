@@ -8,8 +8,14 @@ class Triangulo extends Poligono
 
     public function __construct($a, $b, $c, $h)
     {
+        $this->lados=3;
+        $this->lado_a=$a;
+        $this->lado_a=$a;º
 
- }
+
+
+
+    }
 
 
 }
