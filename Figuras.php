@@ -49,3 +49,18 @@ echo '<p>Área del '. get_class($cuadrado) . ': <mark>' . $cuadrado->
 area() . '</mark></p>';
 
 echo '<hr>';
+
+echo '
+    <h3>Rectangulo</h3>
+    <img src="http://bextlan.com/img/para-cursos/poo-rectangulo.png">
+';
+
+$rectangulo = new Rectangulo(5, 6);
+echo '<p>' . $rectangulo->lados() . '</p>';
+echo '<p>Perímetro del '. get_class($rectangulo) . ': <mark>' . $rectangulo->
+perimetro() . '</mark></p>';
+
+echo '<p>Área del '. get_class($rectangulo) . ': <mark>' . $rectangulo->
+area() . '</mark></p>';
+
+echo '<hr>';
