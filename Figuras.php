@@ -64,3 +64,18 @@ echo '<p>Área del '. get_class($rectangulo) . ': <mark>' . $rectangulo->
 area() . '</mark></p>';
 
 echo '<hr>';
+
+echo '
+    <h3>Hexágono</h3>
+    <img src="http://bextlan.com/img/para-cursos/poo-hexagono.png">
+';
+
+$hexagono = new Hexagono(8, 9);
+echo '<p>' . $hexagono->lados() . '</p>';
+echo '<p>Perímetro del '. get_class($hexagono) . ': <mark>' . $hexagono->
+perimetro() . '</mark></p>';
+
+echo '<p>Área del '. get_class($hexagono) . ': <mark>' . $hexagono->
+area() . '</mark></p>';
+
+echo '<hr>';
