@@ -17,12 +17,35 @@ echo '
 
     <hr>
 
-
-
-
 ';
 
 echo '
     <h3>Tríangulo</h3>
     <img src="http://bextlan.com/img/para-cursos/poo-triangulo.png">
 ';
+
+$triangulo = new Triangulo(3, 6, 9, 10);
+echo '<p>' . $triangulo->lados() . '</p>';
+echo '<p>Perímetro del '. get_class($triangulo) . ': <mark>' . $triangulo->
+perimetro() . '</mark></p>';
+
+echo '<p>Área del '. get_class($triangulo) . ': <mark>' . $triangulo->
+area() . '</mark></p>';
+
+echo '<hr>';
+
+
+echo '
+    <h3>Cuadrado</h3>
+    <img src="http://bextlan.com/img/para-cursos/poo-cuadrado.png">
+';
+
+$cuadrado = new Cuadrado(7);
+echo '<p>' . $cuadrado->lados() . '</p>';
+echo '<p>Perímetro del '. get_class($cuadrado) . ': <mark>' . $cuadrado->
+perimetro() . '</mark></p>';
+
+echo '<p>Área del '. get_class($cuadrado) . ': <mark>' . $cuadrado->
+area() . '</mark></p>';
+
+echo '<hr>';
