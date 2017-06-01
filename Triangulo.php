@@ -13,21 +13,17 @@ class Triangulo extends Poligono
         $this->lado_c = $c;
         $this->altura = $h;
     }
-
     public function perimetro()
     {
         return $this->lado_a + $this->lado_b + $this->lado_c;
     }
-
     public function area()
     {
         return ($this-> lado_b * $this->altura) / 2;
     }
-
     public function lados()
     {
         return 'Un <mark> ' . get_called_class() . '</mark> tiene <mark>'  . 
         $this->lados . '</mark> lados';
     }
-
 }
