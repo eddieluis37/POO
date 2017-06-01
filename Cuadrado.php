@@ -20,10 +20,6 @@ class Cuadrado extends Poligono
         return pow($this->lado, 2);
     }
 
-    public function lados()
-    {
-        return 'Un <mark> ' . get_called_class() . '</mark> tiene <mark>'  . 
-        $this->lados . '</mark> lados';
-    }
+    
 
 }

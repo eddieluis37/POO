@@ -21,9 +21,5 @@ class Triangulo extends Poligono
     {
         return ($this-> lado_b * $this->altura) / 2;
     }
-    public function lados()
-    {
-        return 'Un <mark> ' . get_called_class() . '</mark> tiene <mark>'  . 
-        $this->lados . '</mark> lados';
-    }
+   
 }
