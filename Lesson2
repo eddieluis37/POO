@@ -1,0 +1,76 @@
+<?php
+
+class Person {
+    protected $firstName; // public, protected <-> private
+    protected $lastName;
+    protected $nickname;
+    protected $dateBirth;
+    protected $changedNickname = 0;
+
+    public function __construct($firstName, $lastName, $dateBirth)
+    {
+        $this->firstName = $firstName;
+        $this->lastName = $lastName;
+        $this->dateBirth = new DateTime($dateBirth);
+    }
+   
+    public function getFirstName()
+    {
+        return $this->firstName;
+    }
+   
+    public function getLastName()
+    {
+        return $this->lastName;
+    }
+
+    public function setNickname($nickname)
+    {
+        if ($this->changedNickname >=2)
+        {
+            throw new Exception ("Usted ya realizo los 2 cambios");
+        }
+
+        if (strlen($nickname) < 2)
+        {
+            throw new Exception("The nickname allow just more than 2 characters");
+        }
+
+        if ($nickname == $this->firstName || $nickname == $this->lastName)
+        {
+            throw new Exception("The nickname can't be the same to firstname or lastname");
+        }
+
+        $this->nickname = $nickname;
+        $this->changedNickname++;
+    }
+
+    public function getAge()
+    {
+        $fechaActual = new DateTime();
+        $edad = $fechaActual->diff($this->dateBirth);
+        return "Tu edad es $edad->y";
+    }
+    
+    public function getNickname()
+    {
+        return $this->nickname;
+    }
+   
+    public function getFullName()
+    {
+        return $this->firstName . ' ' . $this->lastName;
+    }
+}
+
+$person1 = new Person('Eddie', 'Palacios', '1977');
+
+$person1->setNickname('EddieLuis');
+
+
+echo "{$person1->getFullName()}";
+
+echo $person1->getAge();
+
+
+exit($person1->getNickname());
